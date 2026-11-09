@@ -10,6 +10,8 @@
     <p id="witaj"></p>
     <h2>Wybierz grę</h2>
 
+    <button id="Turniej">Turniej</button>
+
     <div class="menu">
       <a href="lobby.html?gra=go">Go</a>
       <a href="lobby.html?gra=szachy">Szachy</a>
@@ -28,6 +30,11 @@
     document.getElementById("wyloguj").onclick = async () => {
       await zapytanie("/api/wyloguj", {});
       location.href = "login.html";
+    };
+
+    document.getElementById("Turniej").onclick = async () => {
+      await zapytanie("/api/turniej", {});
+      // Do dokonczenia
     };
   </script>
 </body>
